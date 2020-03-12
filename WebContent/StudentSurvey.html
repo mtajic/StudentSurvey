@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Servey From</title>
+  <link rel="stylesheet" type="text/css" href="StudentSurvey.css">
+</head>
+<body>
+
+  <h1>Prospective Students Servey</h1>
+
+  <form>
+    <div>
+      <label for="first-name">First Name:</label>
+      <input type="text" name="first-name" id="first-name" placeholder="John" required />
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" name="last-name" id="last-name" placeholder="Smith" required />
+    <br><br>
+      <label for="street-address">Street Adress:</label>
+      <input type="text" name="street-address" id="street-address" placeholder="Address line 1" required />
+
+      <label for="city">City:</label>
+      <input type="text" name="city" id="city" placeholder="City" required />
+
+      <label for="state">State:</label>
+      <input type="text" name="state" id="state" placeholder="state" required />
+
+      <label for="zip">Zip:</label>
+      <input type="text" name="zip" id="zip" placeholder="Zip" required />
+    <br><br>
+      <label for="telephone">Telephone:</label>
+      <input type="text" name="telephone" id="telephone" placeholder="telephone" required />
+
+        <label for="email">Email:</label>
+      <input type="text" name="email" id="email" placeholder="email" required /><br><br>
+    </div>
+
+     <div>
+      <!-- Normally we'd have a label for each field, but since these 3 select drop downs go together, we'll just use one and make it match up to the first select field (month) -->
+      <label for="select-choice">Date of Survey:</label>
+      <select name="select-choice" id="select-choice">
+        <option value="0" selected disabled>Month</option>
+        <option value="january">Jan</option>
+        <option value="february">Feb</option>
+        <option value="march">Mar</option>
+        <option value="april">Apr</option>
+        <option value="may">May</option>
+        <option value="june">Jun</option>
+        <option value="july">Jul</option>
+        <option value="august">Aug</option>
+        <option value="september">Sep</option>
+        <option value="october">Oct</option>
+        <option value="november">Nov</option>
+        <option value="december">Dec</option>
+      </select>
+      
+      <select name="servey-day" id="day">
+        <option value="0" selected disabled>Day</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>
+      
+      <select name="survey-year" id="year">
+        <option value="0" selected disabled>Year</option>
+        <option value="2015">2020</option>
+        <option value="2014">2019</option>
+        <option value="2013">2018</option>
+        <option value="2012">2017</option>
+        <option value="2011">2016</option>
+        <option value="2010">2015</option>
+
+      </select>
+    </div>
+
+    <p>What do you like most about the campus?</p>
+      <input type="checkbox" name="students" value="Bike">
+      <label for="students"> Students</label><br>
+
+      <input type="checkbox" name="location" value="Car">
+      <label for="location"> location</label><br>
+
+      <input type="checkbox" name="campus" value="Boat" checked>
+      <label for="campus"> campus</label><br>
+
+      <input type="checkbox" name="atmosphere" value="Bike">
+      <label for="atmosphere"> atmosphere</label><br>
+
+      <input type="checkbox" name="dorm-rooms" value="Car">
+      <label for="dorm-rooms"> Dorm rooms</label><br>
+
+      <input type="checkbox" name="sport" value="Boat" checked>
+      <label for="sport"> sport</label><br><br>
+
+
+     <div>
+        <p>How did you become interested in our university?</p>
+
+        <label for="radio-choice-1">Friend</label>
+        <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" />
+
+        <label for="radio-choice-2">Television</label>
+        <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+
+        <label for="radio-choice-3">Internet</label>
+        <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+
+        <label for="radio-choice-4">Other</label>
+        <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+        <br><br>
+     </div>
+
+    <label for="select-choice">How likeley are you to recommend this school to others:</label>
+          <select name="select-choice" id="select-choice">
+            <option value="0" selected disabled>Choose one</option>
+            <option value="3">Very likely</option>
+            <option value="2">Likely</option>
+            <option value="1">Unlikely</option>
+          </select>
+
+    <div>
+        <p>Enter at least ten comma seperated numbers ranging from 1 to 100 in the Raffle field below.</p>
+      <label for="raffle">Raffle:</label>
+      <input type="text" name="raffle" id="raffle" pattern=".{5,10}" placeholder=" enter your number here" required title="at least ten numbers between 1 to 100">
+    </div><br><br>
+
+    <label>Comments:</label> <br>
+    <textarea rows="4" cols="50" name="comment" form="usrform">
+    Enter text here...</textarea>
+
+    <!-- <div>
+      <label for="checkbox">I agree to the terms and conditions</label>
+      <input type="checkbox" name="checkbox" id="checkbox" />
+    </div> -->
+
+    <div>
+      <input type="submit" value="Submit" />
+      <input type="submit" value="Cancel" />
+    </div>
+  </form>  
+
+</body>
+</html>
