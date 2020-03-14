@@ -24,5 +24,6 @@
         </configuration>
       </plugin>
     </plugins>
+    <finalName>survey</finalName>
   </build>
 </project>
