@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "7"
+  creationTimestamp: "2020-03-12T00:22:58Z"
+  generation: 7
+  labels:
+    app: kubernetes-swe645
+  name: kubernetes-swe645
+  namespace: default
+  resourceVersion: "88050"
+  selfLink: /apis/apps/v1/namespaces/default/deployments/kubernetes-swe645
+  uid: 966b3593-aa28-4e35-b4e7-8752462f03d4
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: kubernetes-swe645
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/restartedAt: "2020-03-14T06:58:50Z"
+      creationTimestamp: null
+      labels:
+        app: kubernetes-swe645
+    spec:
+      containers:
+      - image: mtajic/swe645:studentsurvey01
+        imagePullPolicy: Always
+        name: swe645
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
